@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Vocational Academy | Practical Vocational Training in Dehiowita</title>
+<meta name="description" content="Global Vocational Academy in Dehiowita, Sri Lanka offers practical vocational training: Professional Cookery, Cake Decorating, Hotel Multitask and hospitality courses. Register today.">
+<meta name="keywords" content="vocational academy, cookery course, cake decorating, hotel training, Dehiowita, Sri Lanka">
+<meta property="og:title" content="Global Vocational Academy">
+<meta property="og:description" content="Build Your Skills. Build Your Future. Practical vocational training for exciting careers.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0b3d91; --blue-2:#0a2f6e; --blue-light:#e8f0fb; --blue-mid:#2f6fd0;
+  --gold:#d4a017; --gold-2:#f0c75e; --gold-light:#fdf6e3;
+  --white:#ffffff; --ink:#1b2431; --muted:#5a6577; --radius:16px;
+  --shadow:0 10px 30px rgba(11,61,145,.12); --shadow-lg:0 20px 50px rgba(11,61,145,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fbfcfe;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;color:var(--blue-2)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:0 auto}
+section{padding:90px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+.section-title{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:14px}
+.section-sub{color:var(--muted);max-width:640px;margin:0 auto 50px}
+.center{text-align:center}
+.center .section-sub{margin-left:auto;margin-right:auto}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:.3s cubic-bezier(.2,.7,.3,1);cursor:pointer;border:2px solid transparent}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#3a2b00;box-shadow:0 8px 22px rgba(212,160,23,.35)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(212,160,23,.45)}
+.btn-outline{border-color:rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(6px)}
+.btn-outline:hover{background:#fff;color:var(--blue);transform:translateY(-3px)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-2);transform:translateY(-3px);box-shadow:var(--shadow)}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:.35s;padding:18px 0}
+header.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 4px 24px rgba(11,61,145,.1);padding:10px 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-mid));display:grid;place-items:center;color:var(--gold-2);font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;box-shadow:var(--shadow)}
+.logo-text{line-height:1.15}
+.logo-text strong{display:block;font-family:'Playfair Display',serif;color:#fff;font-size:1.05rem;transition:.3s}
+.logo-text span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+header.scrolled .logo-text strong{color:var(--blue-2)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;color:rgba(255,255,255,.92);position:relative;padding:6px 0;transition:.3s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover::after{width:100%}
+header.scrolled .nav-links a{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-register{padding:11px 26px;font-size:.88rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;z-index:1002;padding:6px}
+.hamburger span{width:26px;height:2.5px;background:#fff;border-radius:3px;transition:.3s}
+header.scrolled .hamburger span{background:var(--blue-2)}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 90px;color:#fff;
+  background:linear-gradient(rgba(6,28,68,.82),rgba(6,28,68,.68)),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat}
+.hero::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:90px;background:linear-gradient(to bottom,transparent,#fbfcfe 85%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(212,160,23,.55);color:var(--gold-2);padding:9px 20px;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:26px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(212,160,23,.6)}50%{box-shadow:0 0 0 8px rgba(212,160,23,0)}}
+.hero h1{font-size:clamp(2.5rem,5.5vw,4.2rem);color:#fff;line-height:1.12;margin-bottom:8px}
+.hero h1 .gold{background:linear-gradient(120deg,var(--gold-2),var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-tagline{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2.4vw,1.7rem);color:var(--gold-2);margin-bottom:20px}
+.hero p{max-width:540px;color:rgba(255,255,255,.85);font-size:1.05rem;margin-bottom:36px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.hero-card{background:rgba(255,255,255,.97);border-radius:var(--radius);padding:30px;color:var(--ink);box-shadow:var(--shadow-lg);animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-card h3{font-size:1.25rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid #edf1f7}
+.stat-row:last-child{border:0}
+.stat-row .num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--blue)}
+.stat-row .lbl{font-size:.85rem;color:var(--muted);text-align:right}
+.hero-scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:3;color:var(--blue);font-size:1.6rem;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--blue);padding:14px 0;overflow:hidden}
+.marquee-track{display:flex;gap:56px;white-space:nowrap;animation:scrollX 26s linear infinite;width:max-content}
+.marquee-track span{color:#fff;font-size:.88rem;font-weight:500;letter-spacing:.08em;display:flex;align-items:center;gap:14px}
+.marquee-track i{color:var(--gold-2);font-style:normal}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-img{position:relative}
+.about-img img{border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.about-img::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:3px solid var(--gold);border-radius:var(--radius);z-index:-1}
+.exp-badge{position:absolute;bottom:-24px;right:-14px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#3a2b00;border-radius:14px;padding:18px 24px;text-align:center;box-shadow:0 14px 30px rgba(212,160,23,.4)}
+.exp-badge strong{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;line-height:1}
+.exp-badge span{font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.about-list{list-style:none;margin:26px 0 34px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-list li{display:flex;gap:12px;align-items:flex-start;font-size:.94rem;font-weight:500}
+.about-list .check{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;font-size:.75rem;font-weight:700;margin-top:2px}
+
+/* ---------- Courses ---------- */
+#courses{background:linear-gradient(180deg,#fff 0%,var(--blue-light) 100%)}
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.course-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.4s cubic-bezier(.2,.7,.3,1);display:flex;flex-direction:column;position:relative}
+.course-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
+.course-img{height:210px;overflow:hidden;position:relative}
+.course-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.course-card:hover .course-img img{transform:scale(1.08)}
+.course-img .tag{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.94);color:var(--blue);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:50px}
+.course-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.course-body h3{font-size:1.3rem;margin-bottom:10px}
+.course-body p{color:var(--muted);font-size:.92rem;flex:1}
+.course-meta{display:flex;gap:18px;margin:16px 0 20px;font-size:.84rem;color:var(--blue);font-weight:600}
+.course-meta span{display:flex;align-items:center;gap:6px}
+.course-body .btn{justify-content:center}
+
+/* ---------- Course detail modal ---------- */
+.modal-overlay{position:fixed;inset:0;background:rgba(8,20,45,.72);backdrop-filter:blur(5px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex;animation:fadeIn .3s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal{background:#fff;border-radius:20px;max-width:760px;width:100%;max-height:88vh;overflow-y:auto;position:relative;animation:slideUp .4s cubic-bezier(.2,.7,.3,1)}
+@keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-hero{height:240px;border-radius:20px 20px 0 0;background-size:cover;background-position:center;position:relative}
+.modal-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,28,68,.15),rgba(6,28,68,.75));border-radius:20px 20px 0 0}
+.modal-hero h2{position:absolute;bottom:22px;left:30px;color:#fff;font-size:1.8rem;z-index:2}
+.modal-close{position:absolute;top:18px;right:18px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);border:0;font-size:1.1rem;cursor:pointer;color:var(--blue-2);z-index:5;transition:.3s}
+.modal-close:hover{background:var(--gold);transform:rotate(90deg)}
+.modal-body{padding:34px}
+.modal-body h4{font-size:1.1rem;margin:24px 0 10px;display:flex;align-items:center;gap:10px}
+.modal-body h4::before{content:"";width:22px;height:3px;background:var(--gold);border-radius:3px}
+.modal-body p,.modal-body li{color:var(--muted);font-size:.94rem}
+.modal-body ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.modal-body ul li{padding-left:22px;position:relative}
+.modal-body ul li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.info-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.info-strip div{background:var(--blue-light);border-radius:12px;padding:16px;text-align:center}
+.info-strip strong{display:block;color:var(--blue);font-size:.95rem}
+.info-strip span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* ---------- Why choose us ---------- */
+.why{background:var(--blue-2);position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;top:-140px;right:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,.22),transparent 70%)}
+.why .section-title{color:#fff}
+.why .section-sub{color:rgba(255,255,255,.72)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;position:relative;z-index:2}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:34px 28px;transition:.35s;backdrop-filter:blur(4px)}
+.why-card:hover{background:rgba(255,255,255,.12);transform:translateY(-8px);border-color:var(--gold)}
+.why-icon{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px;box-shadow:0 8px 20px rgba(212,160,23,.35)}
+.why-card h3{color:#fff;font-size:1.15rem;margin-bottom:10px}
+.why-card p{color:rgba(255,255,255,.72);font-size:.9rem}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.g-item{border-radius:14px;overflow:hidden;position:relative;cursor:pointer}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.g-item:hover img{transform:scale(1.07)}
+.g-item::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px;background:linear-gradient(180deg,transparent 45%,rgba(6,28,68,.85));color:#fff;font-size:.85rem;font-weight:600;letter-spacing:.04em;opacity:0;transition:.35s}
+.g-item:hover::after{opacity:1}
+.g-tall{grid-row:span 2}
+.g-wide{grid-column:span 2}
+.lightbox{position:fixed;inset:0;background:rgba(5,14,33,.92);z-index:3000;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex;animation:fadeIn .3s}
+.lightbox img{max-width:92%;max-height:86vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox-close{position:absolute;top:24px;right:30px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer}
+
+/* ---------- Register ---------- */
+#register{background:linear-gradient(rgba(6,28,68,.9),rgba(6,28,68,.86)),url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1920&q=80') center/cover fixed;color:#fff}
+.reg-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.reg-grid h2{color:#fff;font-size:clamp(1.9rem,3.5vw,2.6rem)}
+.reg-grid .lead{color:rgba(255,255,255,.85);margin:18px 0 28px}
+.reg-perks{list-style:none;display:grid;gap:14px}
+.reg-perks li{display:flex;gap:14px;align-items:center;font-weight:500}
+.reg-perks .check{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#3a2b00;display:grid;place-items:center;font-weight:800}
+.reg-form{background:#fff;border-radius:20px;padding:40px;color:var(--ink);box-shadow:var(--shadow-lg)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:7px;color:var(--blue-2)}
+.field input,.field select,.field textarea{width:100%;padding:13px 16px;border:1.5px solid #dde4ef;border-radius:10px;font-family:'Inter',sans-serif;font-size:.92rem;background:#f8fafd;transition:.3s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(11,61,145,.1)}
+.field textarea{resize:vertical;min-height:90px}
+.field.error input,.field.error select{border-color:#d64545;background:#fff5f5}
+.err-msg{display:none;color:#d64545;font-size:.76rem;margin-top:5px}
+.field.error .err-msg{display:block}
+.reg-form .btn{width:100%;justify-content:center;margin-top:6px}
+.form-success{display:none;text-align:center;padding:30px 10px}
+.form-success.show{display:block}
+.form-success .big-check{width:74px;height:74px;border-radius:50%;background:var(--blue-light);color:var(--blue);font-size:2rem;display:grid;place-items:center;margin:0 auto 18px}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+.contact-cards{display:grid;gap:18px}
+.c-card{display:flex;gap:18px;align-items:flex-start;background:#fff;border-radius:14px;padding:22px;box-shadow:var(--shadow);transition:.3s}
+.c-card:hover{transform:translateX(8px)}
+.c-icon{flex:0 0 50px;width:50px;height:50px;border-radius:12px;background:var(--blue-light);color:var(--blue);display:grid;place-items:center;font-size:1.3rem}
+.c-card h4{font-size:1rem;margin-bottom:4px}
+.c-card p{color:var(--muted);font-size:.9rem}
+.c-card a{color:var(--blue);font-weight:600}
+.map-wrap{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);min-height:420px}
+.map-wrap iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+.socials{display:flex;gap:12px;margin-top:8px}
+.socials a{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:1.05rem;transition:.3s}
+.socials a:hover{background:var(--gold);color:#3a2b00;transform:translateY(-4px)}
+
+/* ---------- Footer ---------- */
+footer{background:#071c44;color:rgba(255,255,255,.78);padding:70px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:44px;padding-bottom:50px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:20px;position:relative;padding-bottom:12px}
+footer h4::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:2px;background:var(--gold)}
+footer p{font-size:.9rem}
+.f-links{list-style:none;display:grid;gap:10px}
+.f-links a{font-size:.9rem;transition:.3s;display:inline-flex;gap:8px;align-items:center}
+.f-links a:hover{color:var(--gold-2);transform:translateX(4px)}
+.f-contact{list-style:none;display:grid;gap:14px;font-size:.9rem}
+.f-contact li{display:flex;gap:12px;align-items:flex-start}
+.f-contact .ic{color:var(--gold-2);margin-top:3px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.84rem}
+.footer-bottom a{color:var(--gold-2)}
+
+/* ---------- Floating buttons ---------- */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:1500;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.45);transition:.3s;animation:waPulse 2.6s infinite}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes waPulse{0%,100%{box-shadow:0 10px 26px rgba(37,211,102,.45)}50%{box-shadow:0 10px 26px rgba(37,211,102,.45),0 0 0 12px rgba(37,211,102,.15)}}
+.back-top{position:fixed;bottom:96px;right:26px;z-index:1500;width:46px;height:46px;border-radius:12px;background:var(--blue);color:#fff;border:0;cursor:pointer;font-size:1.1rem;display:none;place-items:center;box-shadow:var(--shadow);transition:.3s}
+.back-top.show{display:grid}
+.back-top:hover{background:var(--gold);color:#3a2b00}
+
+/* ---------- Reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(36px);transition:.8s cubic-bezier(.2,.7,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-card{max-width:520px;animation:none}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:0;background:linear-gradient(160deg,var(--blue-2),var(--blue));flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:.45s cubic-bezier(.2,.7,.3,1);z-index:1001}
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{color:#fff!important;font-size:1.2rem}
+  .hamburger{display:flex}
+  .hamburger.active span:nth-child(1){transform:translateY(7.5px) rotate(45deg);background:#fff}
+  .hamburger.active span:nth-child(2){opacity:0}
+  .hamburger.active span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);background:#fff}
+  .nav-register{display:none}
+  .about-grid,.reg-grid,.contact-grid{grid-template-columns:1fr}
+  section{padding:66px 0}
+  .modal-body ul{grid-template-columns:1fr}
+  .info-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .about-list{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-auto-rows:180px}
+  .g-wide{grid-column:span 2}
+  .hero-btns .btn{width:100%;justify-content:center}
+  .info-strip{grid-template-columns:1fr}
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container nav">
+    <a href="#home" class="logo" aria-label="Global Vocational Academy home">
+      <span class="logo-mark">G</span>
+      <span class="logo-text"><strong>Global Vocational</strong><span>Academy</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#why">Why Choose Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#register" class="btn btn-gold nav-register">Register Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-badge"><span class="dot"></span> Enrolling Now — 2026 Intakes Open</span>
+      <h1>GLOBAL <span class="gold">VOCATIONAL</span> ACADEMY</h1>
+      <div class="hero-tagline">Build Your Skills. Build Your Future.</div>
+      <p>Practical vocational training designed to help you develop valuable skills and prepare for exciting career opportunities.</p>
+      <div class="hero-btns">
+        <a href="#courses" class="btn btn-gold">Explore Courses <span>→</span></a>
+        <a href="#register" class="btn btn-outline">Register Now</a>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <h3>⬡ Why Students Trust Us</h3>
+      <div class="stat-row"><span class="num">500+</span><span class="lbl">Students Trained<br>&amp; Certified</span></div>
+      <div class="stat-row"><span class="num">10+</span><span class="lbl">Practical Vocational<br>Programs</span></div>
+      <div class="stat-row"><span class="num">95%</span><span class="lbl">Career Placement<br>Support Rate</span></div>
+      <div class="stat-row"><span class="num">100%</span><span class="lbl">Hands-On Practical<br>Training</span></div>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll" aria-label="Scroll down">▾</a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span><i>◆</i> Professional Cookery</span><span><i>◆</i> Cake Decorating</span><span><i>◆</i> Hotel Multitask</span><span><i>◆</i> Hospitality Training</span><span><i>◆</i> Bakery &amp; Patisserie</span><span><i>◆</i> Front Office Operations</span>
+    <span><i>◆</i> Professional Cookery</span><span><i>◆</i> Cake Decorating</span><span><i>◆</i> Hotel Multitask</span><span><i>◆</i> Hospitality Training</span><span><i>◆</i> Bakery &amp; Patisserie</span><span><i>◆</i> Front Office Operations</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Students learning in a modern classroom at Global Vocational Academy" loading="lazy">
+      <div class="exp-badge"><strong>15+</strong><span>Years of Excellence</span></div>
+    </div>
+    <div class="reveal d1">
+      <span class="eyebrow">About Us</span>
+      <h2 class="section-title">Practical Education, Real Careers</h2>
+      <p style="color:var(--muted)">Global Vocational Academy provides practical and career-focused vocational education designed to help students develop industry-relevant skills and prepare for employment and future opportunities.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span> Experienced instructors from the industry</li>
+        <li><span class="check">✓</span> Hands-on practical training</li>
+        <li><span class="check">✓</span> Career-focused education</li>
+        <li><span class="check">✓</span> Dedicated student support</li>
+        <li><span class="check">✓</span> Modern learning environment</li>
+        <li><span class="check">✓</span> Recognized certification</li>
+      </ul>
+      <a href="#register" class="btn btn-blue">Join Our Academy →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section id="courses">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Our Courses</span>
+      <h2 class="section-title">Vocational Programs That Lead to Careers</h2>
+      <p class="section-sub">Industry-relevant courses taught by experienced trainers — with practical, hands-on learning from day one.</p>
+    </div>
+    <div class="course-grid">
+      <article class="course-card reveal">
+        <div class="course-img"><span class="tag">Most Popular</span><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Professional cookery training in a commercial kitchen" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Professional Cookery</h3>
+          <p>Master culinary arts, kitchen operations, food safety and international cuisine in our fully equipped training kitchen.</p>
+          <div class="course-meta"><span>⏱ 6 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('cookery')">View Course</button>
+        </div>
+      </article>
+      <article class="course-card reveal d1">
+        <div class="course-img"><span class="tag">Creative</span><img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80" alt="Cake decorating and sugar craft training" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Cake Decorating</h3>
+          <p>Learn cake design, sugar craft, fondant work, piping and celebration cake creation from expert decorators.</p>
+          <div class="course-meta"><span>⏱ 3 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('cake')">View Course</button>
+        </div>
+      </article>
+      <article class="course-card reveal d2">
+        <div class="course-img"><span class="tag">Hospitality</span><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80" alt="Hotel operations and multitask training" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Hotel Multitask</h3>
+          <p>Gain cross-functional hospitality skills covering front office, housekeeping, food service and guest relations.</p>
+          <div class="course-meta"><span>⏱ 6 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('hotel')">View Course</button>
+        </div>
+      </article>
+      <article class="course-card reveal d3">
+        <div class="course-img"><span class="tag">Baking</span><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Bakery and patisserie vocational training" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Bakery &amp; Patisserie</h3>
+          <p>From artisan breads to pastries and desserts — build professional baking skills for shops, hotels and your own business.</p>
+          <div class="course-meta"><span>⏱ 4 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('bakery')">View Course</button>
+        </div>
+      </article>
+      <article class="course-card reveal d1">
+        <div class="course-img"><span class="tag">Hospitality</span><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Barista and beverage service training" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Barista &amp; Beverage Service</h3>
+          <p>Learn coffee art, beverage preparation and café service skills — one of the fastest-growing hospitality careers.</p>
+          <div class="course-meta"><span>⏱ 2 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('barista')">View Course</button>
+        </div>
+      </article>
+      <article class="course-card reveal d2">
+        <div class="course-img"><span class="tag">Business</span><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80" alt="Entrepreneurship and small business skills training" loading="lazy"></div>
+        <div class="course-body">
+          <h3>Entrepreneurship &amp; Small Business</h3>
+          <p>Turn your skills into income — business planning, costing, marketing and customer service for your own venture.</p>
+          <div class="course-meta"><span>⏱ 3 Months</span><span>★ Practical</span></div>
+          <button class="btn btn-blue" onclick="openCourse('business')">View Course</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Why Choose Us</span>
+      <h2 class="section-title">Your Success Is Our Mission</h2>
+      <p class="section-sub">Everything at Global Vocational Academy is designed around one goal — getting you career-ready.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon">🍳</div><h3>Practical Training</h3><p>Learn by doing in real kitchens, training labs and simulated hotel environments — not just theory.</p></div>
+      <div class="why-card reveal d1"><div class="why-icon">👨‍🏫</div><h3>Experienced Trainers</h3><p>Our instructors are industry professionals with years of real-world hospitality and culinary experience.</p></div>
+      <div class="why-card reveal d2"><div class="why-icon">🎯</div><h3>Career-Focused Courses</h3><p>Every program is built around the skills employers actually look for when hiring.</p></div>
+      <div class="why-card reveal d3"><div class="why-icon">🏨</div><h3>Industry-Relevant Skills</h3><p>Curriculum aligned with current industry standards in hospitality, cookery and baking.</p></div>
+      <div class="why-card reveal d1"><div class="why-icon">🤝</div><h3>Friendly Learning Environment</h3><p>Small class sizes and supportive trainers make learning enjoyable and effective.</p></div>
+      <div class="why-card reveal d2"><div class="why-icon">🎓</div><h3>Student Support</h3><p>Guidance with career placement, internships and starting your own business after graduation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Gallery</span>
+      <h2 class="section-title">Life at the Academy</h2>
+      <p class="section-sub">A glimpse into our classrooms, practical training sessions and student achievements.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-tall reveal" data-label="Students Learning" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80" alt="Students learning together" loading="lazy"></div>
+      <div class="g-item reveal d1" data-label="Cookery Training" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="Cookery practical training" loading="lazy"></div>
+      <div class="g-item reveal d2" data-label="Cake Decorating" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=700&q=80" alt="Cake decorating class" loading="lazy"></div>
+      <div class="g-item g-wide reveal d3" data-label="Classroom Activities" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80" alt="Classroom activities" loading="lazy"></div>
+      <div class="g-item reveal d1" data-label="Practical Training" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Kitchen practical training" loading="lazy"></div>
+      <div class="g-item reveal d2" data-label="Academy Events" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80" alt="Academy events and seminars" loading="lazy"></div>
+      <div class="g-item reveal d3" data-label="Hospitality Training" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Hospitality and restaurant training" loading="lazy"></div>
+      <div class="g-item reveal d1" data-label="Bakery Training" onclick="openLightbox(this)"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Bakery training session" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REGISTER ============ -->
+<section id="register">
+  <div class="container reg-grid">
+    <div class="reveal">
+      <span class="eyebrow">Student Registration</span>
+      <h2>Start Your Career Journey Today</h2>
+      <p class="lead">Seats are limited for each intake. Register your interest now and our team will contact you with course details, fees and the next start date.</p>
+      <ul class="reg-perks">
+        <li><span class="check">✓</span> Free career guidance consultation</li>
+        <li><span class="check">✓</span> Flexible payment plans available</li>
+        <li><span class="check">✓</span> Recognized certification on completion</li>
+        <li><span class="check">✓</span> Job placement &amp; internship support</li>
+      </ul>
+    </div>
+    <div class="reveal d1">
+      <form class="reg-form" id="regForm" novalidate>
+        <div id="formFields">
+          <div class="form-row">
+            <div class="field"><label for="fullname">Full Name *</label><input type="text" id="fullname" name="fullname" placeholder="Your full name" required><small class="err-msg">Please enter your full name.</small></div>
+            <div class="field"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" placeholder="07X XXX XXXX" required><small class="err-msg">Please enter a valid phone number.</small></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="you@example.com" required><small class="err-msg">Please enter a valid email address.</small></div>
+            <div class="field"><label for="course">Course Interested In *</label>
+              <select id="course" name="course" required>
+                <option value="">— Select a course —</option>
+                <option>Professional Cookery</option>
+                <option>Cake Decorating</option>
+                <option>Hotel Multitask</option>
+                <option>Bakery &amp; Patisserie</option>
+                <option>Barista &amp; Beverage Service</option>
+                <option>Entrepreneurship &amp; Small Business</option>
+              </select><small class="err-msg">Please select a course.</small></div>
+          </div>
+          <div class="field"><label for="address">Address *</label><input type="text" id="address" name="address" placeholder="Your address" required><small class="err-msg">Please enter your address.</small></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Any questions or details you'd like to share…"></textarea></div>
+          <button type="submit" class="btn btn-gold">Submit Registration ✦</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="big-check">✓</div>
+          <h3 style="margin-bottom:10px">Registration Received!</h3>
+          <p style="color:var(--muted);margin-bottom:24px">Thank you! Our admissions team will contact you within 24 hours.</p>
+          <button type="button" class="btn btn-blue" onclick="resetForm()">Submit Another Registration</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="center reveal">
+      <span class="eyebrow" style="justify-content:center">Contact Us</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Visit us, call us or send a message — we're happy to help you choose the right course.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <div class="c-card"><div class="c-icon">📍</div><div><h4>Visit Us</h4><p>Global Vocational Academy<br>338/2, Atalugama, Dehiowita<br>Sri Lanka</p></div></div>
+        <div class="c-card"><div class="c-icon">📞</div><div><h4>Phone</h4><p><a href="tel:+94362272277">+94 36 227 2277</a><br>Mon – Sat, 8:00 AM – 5:00 PM</p></div></div>
+        <div class="c-card"><div class="c-icon">💬</div><div><h4>WhatsApp</h4><p><a href="https://wa.me/94771234567" target="_blank" rel="noopener">+94 77 123 4567</a><br>Fastest way to reach us!</p></div></div>
+        <div class="c-card"><div class="c-icon">✉️</div><div><h4>Email</h4><p><a href="mailto:info@globalvocationalacademy.lk">info@globalvocationalacademy.lk</a></p></div></div>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="TikTok">♪</a>
+        </div>
+      </div>
+      <div class="map-wrap reveal d1">
+        <iframe title="Global Vocational Academy location map" src="https://www.google.com/maps?q=Atalugama,+Dehiowita,+Sri+Lanka&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="logo" style="margin-bottom:18px;display:inline-flex">
+          <span class="logo-mark">G</span>
+          <span class="logo-text"><strong style="color:#fff">Global Vocational</strong><span>Academy</span></span>
+        </a>
+        <p>Practical, career-focused vocational education in Dehiowita, Sri Lanka. Build your skills — build your future with us.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="f-links">
+          <li><a href="#home">→ Home</a></li>
+          <li><a href="#about">→ About Us</a></li>
+          <li><a href="#courses">→ Courses</a></li>
+          <li><a href="#why">→ Why Choose Us</a></li>
+          <li><a href="#gallery">→ Gallery</a></li>
+          <li><a href="#contact">→ Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Courses</h4>
+        <ul class="f-links">
+          <li><a href="#courses">→ Professional Cookery</a></li>
+          <li><a href="#courses">→ Cake Decorating</a></li>
+          <li><a href="#courses">→ Hotel Multitask</a></li>
+          <li><a href="#courses">→ Bakery &amp; Patisserie</a></li>
+          <li><a href="#courses">→ Barista &amp; Beverage</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="f-contact">
+          <li><span class="ic">📍</span> 338/2, Atalugama, Dehiowita, Sri Lanka</li>
+          <li><span class="ic">📞</span> <a href="tel:+94362272277">+94 36 227 2277</a></li>
+          <li><span class="ic">💬</span> <a href="https://wa.me/94771234567" target="_blank" rel="noopener">WhatsApp: +94 77 123 4567</a></li>
+          <li><span class="ic">✉️</span> <a href="mailto:info@globalvocationalacademy.lk">info@globalvocationalacademy.lk</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Global Vocational Academy. All rights reserved.</span>
+      <span>Build Your Skills. Build Your Future. <a href="#register">Register Now →</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons -->
+<a class="wa-float" href="https://wa.me/94771234567?text=Hello%2C%20I%20would%20like%20to%20register%20for%20a%20course%20at%20Global%20Vocational%20Academy." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.03c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.8-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
+</a>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<!-- Course detail modal -->
+<div class="modal-overlay" id="courseModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeCourse()" aria-label="Close">✕</button>
+    <div class="modal-hero" id="modalHero"><h2 id="modalTitle"></h2></div>
+    <div class="modal-body">
+      <h4>Course Overview</h4><p id="modalOverview"></p>
+      <h4>What You Will Learn</h4><ul id="modalLearn"></ul>
+      <div class="info-strip">
+        <div><strong id="modalDuration"></strong><span>Duration</span></div>
+        <div><strong id="modalSchedule"></strong><span>Schedule</span></div>
+        <div><strong id="modalCert"></strong><span>Certification</span></div>
+      </div>
+      <h4>Entry Requirements</h4><p id="modalEntry"></p>
+      <h4>Career Opportunities</h4><p id="modalCareer"></p>
+      <h4>Training Information</h4><p id="modalTraining"></p>
+      <a href="#register" class="btn btn-gold" style="margin-top:26px" onclick="closeCourse()">Register for This Course ✦</a>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Close">✕</button>
+  <img id="lightboxImg" src="" alt="Gallery image enlarged">
+</div>
+
+<script>
+/* ---------- Header scroll state ---------- */
+const header=document.getElementById('header'),backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled',window.scrollY>50);
+  backTop.classList.toggle('show',window.scrollY>600);
+});
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---------- Mobile menu ---------- */
+const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',()=>{
+  hamburger.classList.toggle('active');navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  hamburger.classList.remove('active');navLinks.classList.remove('open');
+}));
+
+/* ---------- Scroll reveal ---------- */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- Course data & modal ---------- */
+const COURSES={
+  cookery:{title:'Professional Cookery',img:'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80',
+    overview:'A comprehensive culinary program covering everything from knife skills and food safety to international cuisine and kitchen management. Train in our fully equipped commercial training kitchen under the guidance of experienced chefs.',
+    learn:['Knife skills & food preparation','Food safety & hygiene (HACCP)','Sri Lankan & international cuisine','Soups, sauces & stocks','Meat, fish & poultry cookery','Kitchen management & plating','Menu planning & costing','Stock control & waste management'],
+    duration:'6 Months',schedule:'Full-time, Mon–Fri',cert:'Recognized Diploma',
+    entry:'No prior experience required. Open to anyone aged 16+ with a passion for cooking. O/L qualification preferred but not mandatory.',
+    career:'Commis Chef, Chef de Partie, Sous Chef, Kitchen Supervisor, Caterer, or start your own restaurant or food business.',
+    training:'Classes run Monday to Friday, 8:30 AM – 3:30 PM. 80% practical, hands-on kitchen training with real service simulations and industry placements.'},
+  cake:{title:'Cake Decorating',img:'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1200&q=80',
+    overview:'A creative, hands-on course in professional cake decorating — from classic buttercream finishes to advanced sugar craft. Perfect for aspiring cake artists and home bakers who want to turn their passion into income.',
+    learn:['Buttercream frosting techniques','Fondant covering & modeling','Royal icing & piping','Sugar flowers & gum paste','Wedding & tiered cake assembly','Airbrushing & edible painting','Celebration & novelty cakes','Pricing & selling your cakes'],
+    duration:'3 Months',schedule:'Weekday & weekend batches',cert:'Certificate of Completion',
+    entry:'No experience needed — just enthusiasm! Open to all ages 15+. Ideal for home bakers and creative entrepreneurs.',
+    career:'Cake Artist, Bakery Decorator, Home-Based Cake Business Owner, Wedding Cake Specialist, or work in hotels and bakeries.',
+    training:'Small-group studio classes with one-to-one guidance. All tools and materials provided. Students take home every cake they create.'},
+  hotel:{title:'Hotel Multitask',img:'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80',
+    overview:'A complete hospitality operations program that trains you across front office, housekeeping, food & beverage service and guest relations — making you a versatile, highly employable hotel professional.',
+    learn:['Front office & reception operations','Reservation & booking systems','Housekeeping & room preparation','Food & beverage service skills','Guest relations & communication','Telephone & email etiquette','Hotel safety & security standards','Upselling & guest satisfaction'],
+    duration:'6 Months',schedule:'Full-time, Mon–Sat',cert:'Diploma in Hospitality',
+    entry:'Minimum O/L or equivalent. Good communication skills and a positive attitude. Age 16+. No hotel experience required.',
+    career:'Front Office Receptionist, Guest Relations Officer, Housekeeping Supervisor, F&B Service Staff, or progress to supervisory hotel roles.',
+    training:'Training in our simulated hotel environment with role-play scenarios, plus a guaranteed internship at a partner hotel.'},
+  bakery:{title:'Bakery & Patisserie',img:'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80',
+    overview:'Master the art and science of professional baking — artisan breads, pastries, croissants, desserts and more. A hands-on program for anyone dreaming of a bakery career or their own baking business.',
+    learn:['Bread making & fermentation science','Croissants, Danish & puff pastry','Cakes, tarts & gateaux','Chocolate work & desserts','Gluten-free & specialty baking','Bakery hygiene & food safety','Production scheduling & costing','Display & packaging techniques'],
+    duration:'4 Months',schedule:'Full-time, Mon–Fri',cert:'Certificate in Bakery & Patisserie',
+    entry:'Open to ages 16+. No prior baking experience needed — we start from the basics and build to professional level.',
+    career:'Baker, Pastry Cook, Bakery Supervisor, or launch your own home bakery or retail bakery business.',
+    training:'Daily hands-on baking in our training bakery. Students produce real products for sale through our academy outlet, gaining true commercial experience.'},
+  barista:{title:'Barista & Beverage Service',img:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=80',
+    overview:'A fast-track program into the booming café industry. Learn espresso extraction, milk art, brewing methods and professional beverage service with our industry-experienced trainers.',
+    learn:['Espresso extraction & machine handling','Latte art & milk texturing','Filter & specialty brewing methods','Classic & signature beverages','Smoothies, juices & mocktails','Café service & customer care','Cash handling & POS systems','Café hygiene & maintenance'],
+    duration:'2 Months',schedule:'Morning & evening batches',cert:'Barista Certificate',
+    entry:'Open to ages 15+. No experience required — ideal for students, job seekers and café owners.',
+    career:'Barista, Café Supervisor, Beverage Manager, or start your own café, juice bar or coffee cart.',
+    training:'Intensive practical training on professional espresso machines. Includes a real-world café attachment and latte art certification.'},
+  business:{title:'Entrepreneurship & Small Business',img:'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=1200&q=80',
+    overview:'Designed for graduates of our vocational programs — and anyone with a skill to monetize. Learn how to plan, launch and grow a profitable small business in Sri Lanka.',
+    learn:['Business planning & registration','Costing & pricing strategies','Marketing & social media promotion','Customer service excellence','Basic bookkeeping & tax basics','Sourcing suppliers & inventory','Staff management basics','Accessing finance & support schemes'],
+    duration:'3 Months',schedule:'Weekend & evening classes',cert:'Certificate in Entrepreneurship',
+    entry:'Open to all. Ideal for vocational graduates, home-based business owners and aspiring entrepreneurs of any age.',
+    career:'Business Owner, Freelance Professional, Cottage Industry Operator, or scale an existing small business.',
+    training:'Workshop-style weekend classes with successful local entrepreneurs as guest mentors. Graduate with a complete, ready-to-launch business plan.'}
+};
+function openCourse(key){
+  const c=COURSES[key];
+  document.getElementById('modalTitle').textContent=c.title;
+  document.getElementById('modalHero').style.backgroundImage=`url('${c.img}')`;
+  document.getElementById('modalOverview').textContent=c.overview;
+  document.getElementById('modalLearn').innerHTML=c.learn.map(x=>`<li>${x}</li>`).join('');
+  document.getElementById('modalDuration').textContent=c.duration;
+  document.getElementById('modalSchedule').textContent=c.schedule;
+  document.getElementById('modalCert').textContent=c.cert;
+  document.getElementById('modalEntry').textContent=c.entry;
+  document.getElementById('modalCareer').textContent=c.career;
+  document.getElementById('modalTraining').textContent=c.training;
+  document.getElementById('courseModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCourse(){
+  document.getElementById('courseModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('courseModal').addEventListener('click',e=>{
+  if(e.target.id==='courseModal')closeCourse();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeCourse();closeLightbox();}
+});
+
+/* ---------- Lightbox ---------- */
+function openLightbox(item){
+  const img=item.querySelector('img');
+  document.getElementById('lightboxImg').src=img.src.replace('w=700','w=1400').replace('w=1000','w=1600');
+  document.getElementById('lightboxImg').alt=img.alt;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+/* ---------- Form validation ---------- */
+const form=document.getElementById('regForm');
+function setErr(id,bad){document.getElementById(id).closest('.field').classList.toggle('error',bad);return !bad;}
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  let ok=true;
+  ok=setErr('fullname',document.getElementById('fullname').value.trim().length<3)&&ok;
+  ok=setErr('phone',!/^[0-9+\-\s()]{9,15}$/.test(document.getElementById('phone').value.trim()))&&ok;
+  ok=setErr('email',!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(document.getElementById('email').value.trim()))&&ok;
+  ok=setErr('course',!document.getElementById('course').value)&&ok;
+  ok=setErr('address',document.getElementById('address').value.trim().length<5)&&ok;
+  if(!ok){form.querySelector('.field.error input, .field.error select')?.focus();return;}
+  document.getElementById('formFields').style.display='none';
+  document.getElementById('formSuccess').classList.add('show');
+});
+['fullname','phone','email','course','address'].forEach(id=>{
+  document.getElementById(id).addEventListener('input',()=>document.getElementById(id).closest('.field').classList.remove('error'));
+  document.getElementById(id).addEventListener('change',()=>document.getElementById(id).closest('.field').classList.remove('error'));
+});
+function resetForm(){
+  form.reset();
+  document.getElementById('formFields').style.display='';
+  document.getElementById('formSuccess').classList.remove('show');
+}
+</script>
+</body>
+</html>
